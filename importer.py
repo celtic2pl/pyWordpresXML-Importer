@@ -1,12 +1,12 @@
-import xml.etree.ElementTree as ET
-import logs
-tree = ET.parse('examples\example.xml')
-root = tree.getroot()
-
-print(root.tag)
-print(root.attrib)
+import pwx_xml
+# import pwx_logs
 
 
-log = logs.MyLogs()
+xml = pwx_xml.MyXml()
 
-log.write_warning(text="ala")
+xml.load_xml('examples\\example.xml')
+print("root tag:" + xml.get_root_tag())
+xml.all_tags_from_parent(xml.get_root_tag())
+
+# log = pwx_logs.MyLogs()
+# log.write_warning(text="ala")

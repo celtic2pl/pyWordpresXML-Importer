@@ -22,7 +22,7 @@ class MyLogs:
         logging.warning(text)
         return self.status_ok
 
-
-a = MyLogs()
-a.write_warning("To jest warning")
-a.write_info("To jest info")
+if __name__ == '__main__':
+    a = MyLogs()
+    a.write_warning("To jest warning")
+    a.write_info("To jest info")
